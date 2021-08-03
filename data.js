@@ -8,7 +8,7 @@ const main = {
     {
       name: 'Home',
       iconName: 'logo-firefox',
-      link: 'https://callowidealist.github.io'
+      link: 'https://jitendra.tripathi'
     },
     {
       name: 'Github',
