@@ -1,7 +1,7 @@
 const main = {
   name: 'Jitendra Tripathi',
   mail: 'jiitendra.tripathi@gmail.com',
-  about: 'Hey, I\'m Jitendra Tripathi. A Software Engineer and amateur photographer.',
+  //about: 'Hey, I\'m Jitendra Tripathi. A Software Engineer and amateur photographer.',
   role: ['Backend Developer'],
   connects: [
     {
