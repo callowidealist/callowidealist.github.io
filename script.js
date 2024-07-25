@@ -9,7 +9,7 @@ const dom = {
   main: {
     name: getDOM('#main #name'),
     mail: getDOM('#main #mail'),
-    img: getDOM('#main #img'),
+    about: getDOM('#main #about'),
     role: getDOM('#main #role'),
     connects: getDOM('#main #connects'),
     links: getDOM('#main #links')
@@ -40,7 +40,7 @@ function assignDOM(dom, value, options) {
 assignDOM(dom.main.name(), main.name);
 assignDOM(dom.main.mail(), main.mail);
 dom.main.mail().href = `mailto:${main.mail}?Subject=Hello%20again`;
-assignDOM(dom.main.img(), main.img, { isImg: true });
+assignDOM(dom.main.about(), main.about, { isImg: false });
 assignDOM(dom.main.role(), main.role);
 // assignDOM(dom.main.links(), main.links)
 

@@ -1,9 +1,8 @@
 const main = {
-  name: 'Jitendra Kumar Tripathi',
-  mail: 'jitendrakt2010@gmail.com',
- // img: 'https://organicthemes.com/demo/profile/files/2018/05/profile-pic.jpg',
-  role: ['Full Stack Developer'],
-  // Refer https://ionicons.com/ and put the icon name inside iconName key
+  name: 'Jitendra Tripathi',
+  mail: 'jiitendra.tripathi@gmail.com',
+  about: 'Hey, I\'m Jitendra Tripathi. A Software Engineer and amateur photographer.',
+  role: ['Backend Developer'],
   connects: [
     {
       name: 'Github',
@@ -18,18 +17,13 @@ const main = {
     {
       name: 'StackOverflow',
       iconName: 'logo-stackoverflow',
-      link: 'https://stackoverflow.com/users/6940525/callowidealist'
+      link: 'https://stackoverflow.com/users/7231923/jitendra-kumar-tripathi'
     },
     {
       name: 'Twitter',
       iconName: 'logo-twitter',
-      link: 'https://twitter.com/sivanesh_fiz'
-    }, /*
-    {
-      name: 'npm',
-      iconName: 'logo-npm',
-      link: 'https://www.npmjs.com/~sivanesh_s'
-    }, */
+      link: 'https://twitter.com/jitendrat0'
+    },
     {
       name: 'Mail',
       iconName: 'mail-outline',
@@ -37,7 +31,6 @@ const main = {
     }
   ],
   links: [
-    { name: 'Projects', link: '#projects' },
     { name: 'Blogs', link: 'https://jitendrat.hashnode.dev' }
   ]
 };
