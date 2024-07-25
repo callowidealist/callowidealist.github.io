@@ -1,63 +1,48 @@
-const getDOM = selector => () => {
-  return document.querySelector(selector);
-};
+// Utility function to get DOM elements safely
+const getDOM = selector => document.querySelector(selector);
 
-document.title = `${main.name} | ${main.role}`
+// Function to assign values to DOM elements
+function assignDOM(dom, value, options = {}) {
+  if (!dom) return;
 
-// Values DOM nodes
-const dom = {
-  main: {
-    name: getDOM('#main #name'),
-    mail: getDOM('#main #mail'),
-    //about: getDOM('#main #about'),
-    role: getDOM('#main #role'),
-    connects: getDOM('#main #connects'),
-    links: getDOM('#main #links')
-  },
-  projects: getDOM('#projects'),
-  logo: getDOM('#projects-page #logo')
-};
-
-function assignDOM(dom, value, options) {
-  console.log('dom, value, img:', dom, value, img);
-
-  if (options && options.isImg) {
+  if (options.isImg) {
     dom.src = value;
-    return;
-  }
-
-  if (options && options.isAdjacent) {
+  } else if (options.isAdjacent) {
     dom.insertAdjacentHTML('afterbegin', value);
+  } else {
+    dom.innerHTML = value;
   }
-
-  dom.innerHTML = value;
 }
 
-// Assigning
+// Selecting DOM elements
+const dom = {
+  main: {
+    name: getDOM('#name'),
+    mail: getDOM('#mail'),
+    role: getDOM('#role'),
+    about: getDOM('#about'), // New About Section
+    connects: getDOM('#connects'),
+    links: getDOM('#links')
+  }
+};
 
-// MAIN
-
-assignDOM(dom.main.name(), main.name);
-assignDOM(dom.main.mail(), main.mail);
-dom.main.mail().href = `mailto:${main.mail}?Subject=Hello%20again`;
-//assignDOM(dom.main.about(), main.about);
-assignDOM(dom.main.role(), main.role);
-// assignDOM(dom.main.links(), main.links)
+// Assigning values to the main section
+assignDOM(dom.main.name, main.name);
+assignDOM(dom.main.mail, main.mail);
+assignDOM(dom.main.role, main.role);
+assignDOM(dom.main.about, main.about); // About Section
+dom.main.mail.href = `mailto:${main.mail}?Subject=Hello%20again`;
 
 // External Links (ICONS)
-const connectsDOM = main.connects
-  .map(
+const connectsDOM = main.connects.map(
     ({ name, iconName, link }) =>
-      `<a href=${link} target="_blank"><ion-icon name="${iconName}" title="${name}"></ion-icon></a>`
-  )
-  .join('\n');
-assignDOM(dom.main.connects(), connectsDOM);
+        `<a href="${link}" target="_blank" aria-label="${name}"><ion-icon name="${iconName}" title="${name}"></ion-icon></a>`
+).join('\n');
+assignDOM(dom.main.connects, connectsDOM);
 
 // Internal Links
-const getLinks = links =>
-  links
-    .map(({ name, link }) => `<a href="${link}" class="text-pink-500" >${name}</a>`)
-    .map((link, index, links) => index === links.length - 1 ? link: `${link} - `)
-    .join('\n');
-assignDOM(dom.main.links(), getLinks(main.links));
+const getLinks = links => links.map(({ name, link }) => `<a href="${link}" class="text-pink-500">${name}</a>`).join(' - ');
+assignDOM(dom.main.links, getLinks(main.links));
 
+// Updating the document title
+document.title = `${main.name} | ${main.role}`;
