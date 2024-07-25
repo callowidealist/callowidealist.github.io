@@ -6,11 +6,6 @@ const main = {
   // Refer https://ionicons.com/ and put the icon name inside iconName key
   connects: [
     {
-      name: 'Home',
-      iconName: 'logo-firefox',
-      link: 'https://jitendra.tripathi'
-    },
-    {
       name: 'Github',
       iconName: 'logo-github',
       link: 'https://github.com/callowidealist'
@@ -25,11 +20,11 @@ const main = {
       iconName: 'logo-stackoverflow',
       link: 'https://stackoverflow.com/users/6940525/callowidealist'
     },
-    /*{
+    {
       name: 'Twitter',
       iconName: 'logo-twitter',
       link: 'https://twitter.com/sivanesh_fiz'
-    }, 
+    }, /*
     {
       name: 'npm',
       iconName: 'logo-npm',
@@ -38,11 +33,11 @@ const main = {
     {
       name: 'Mail',
       iconName: 'mail-outline',
-      link: `mailto:${'jitendrakt2010@gmail.com'}?Subject=Hello%20again`
+      link: `mailto:${'jiitendra.tripathi@gmail.com'}?Subject=Hello%20again`
     }
   ],
   links: [
     { name: 'Projects', link: '#projects' },
-    { name: 'Blogs', link: 'jitendra.hackernode.dev' }
+    { name: 'Blogs', link: 'https://jitendrat.hashnode.dev' }
   ]
 };
