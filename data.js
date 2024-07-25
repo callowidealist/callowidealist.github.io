@@ -32,6 +32,6 @@ const main = {
   ],
   links: [
     { name: 'Blogs', link: 'https://jitendrat.hashnode.dev' },
-    { resume: 'Resume', link: 'https://drive.google.com/file/d/1ZSvm1Ax3g5GGfYunLUDLw-IKtGI3GtHP/view'}
+    { name: 'Resume', link: 'https://drive.google.com/file/d/1ZSvm1Ax3g5GGfYunLUDLw-IKtGI3GtHP/view'}
   ]
 };
